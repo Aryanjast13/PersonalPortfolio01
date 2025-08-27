@@ -3,14 +3,14 @@ import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen  relative pt-20 ">
+    <div className="w-full h-auto  relative pt-20 ">
       <Navbar />
       <div className="w-6xl h-full mx-auto pt-[.1px]">
         <div className="w-6xl  h-full flex pt-20">
           <div className="w-4xl h-9 ">
-            <h1 className="text-6xl  mb-4">Aryan Jast</h1>
-            <p className="text-xl mb-6">Mern & Nextjs</p>
-            <p className="mb-6">
+            <h1 className=" mb-2">Aryan Jast</h1>
+            <p className="text-[22px] mb-6">Mern & Nextjs</p>
+            <p className="mb-6 text-lg leading-6">
               A driven full-stack developer based in Kurukshetra, India, with a
               solid foundation in the <b>MERN</b> (MongoDB, Express, React,
               Node.js) stack and a growing proficiency in Next.js. I build
