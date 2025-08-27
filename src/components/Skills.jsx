@@ -14,14 +14,14 @@ const Skills = () => {
           {Frontend?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] hover:rotate-[3deg] hover:scale-105"
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2]"
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
                 src={skill.image.url}
                 alt={skill.name || "Tool icon"}
               />
-              <span className="transition duration-300 text-[.9rem] group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-yellow-500 group-hover:bg-clip-text group-hover:text-transparent">
+              <span className=" ">
                 {skill.name}
               </span>
             </div>
@@ -36,14 +36,14 @@ const Skills = () => {
           {Backend?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] hover:rotate-[3deg] hover:scale-105"
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] "
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
                 src={skill.image.url}
                 alt={skill.name || "Tool icon"}
               />
-              <span className="transition duration-300 text-[.9rem] group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-yellow-500 group-hover:bg-clip-text group-hover:text-transparent">
+              <span className="transition duration-300 text-[.9rem] ">
                 {skill.name}
               </span>
             </div>
@@ -59,14 +59,14 @@ const Skills = () => {
           {Tools?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] hover:rotate-[3deg] hover:scale-105"
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] "
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
                 src={skill.image.url}
                 alt={skill.name || "Tool icon"}
               />
-              <span className="transition duration-300 text-[.9rem] group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-yellow-500 group-hover:bg-clip-text group-hover:text-transparent">
+              <span className="transition duration-300 text-[.9rem] ">
                 {skill.name}
               </span>
             </div>

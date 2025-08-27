@@ -52,7 +52,8 @@
    .logo{
     box-shadow: 0 4px 4px #00000040;
    }
-
+   
+  
     body{
         background:var(--color-primary);
         color:var(--color-text);

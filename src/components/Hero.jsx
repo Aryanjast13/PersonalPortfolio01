@@ -18,7 +18,7 @@ const Hero = () => {
               enhance performance, usability, and code quality.
             </p>
             <div className="flex gap-4 items-center">
-              <button className="bg-black px-3 py-2 rounded-lg flex gap-2 items-center">
+              <button className="bg-logos px-3 py-2 rounded-lg flex gap-2 items-center">
                 <BsDownload />
                 <span>Resume</span>
               </button>
