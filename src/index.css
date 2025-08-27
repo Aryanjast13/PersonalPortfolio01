@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+@import "tailwindcss";
+
+
+@theme{
+  --color-primary:#17152f;
+  --color-secondary:#fefffe;
+  --color-text:#bab7b6;
+  --color-navbar:#0b0816;
+  --color-navbarText:#ffffffb3;
+  --color-border:#d1d1d133;
+  --color-logos:#201d3c;
+
+}
+
+
+@layer base{
+   h1{
+         font-family: "Libre Baskerville", serif;
+         color:var(--color-secondary)
+   }
+   .logo{
+    box-shadow: 0 4px 4px #00000040;
+   }
+
+    body{
+        background:var(--color-primary);
+        color:var(--color-text);
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+@layer components{
+  
+}
