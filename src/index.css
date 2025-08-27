@@ -35,6 +35,18 @@
         font-size: 1.9rem;
         font-weight: 400;
    }
+   h4{
+          font-family: "Crete Round", serif;
+         color:var(--color-secondary);
+        font-size: 1.5rem;
+        font-weight: 400;
+   }
+    h5{
+          font-family: "Crete Round", serif;
+         color:var(--color-secondary);
+        font-size: 1rem;
+        font-weight: 400;
+   }
 
 
    .logo{
