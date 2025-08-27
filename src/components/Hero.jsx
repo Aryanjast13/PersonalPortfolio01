@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
-    <div className="w-full h-auto  relative pt-20 ">
+    <div className="w-full h-auto  relative py-20  ">
       <Navbar />
       <div className="w-6xl h-full mx-auto pt-[.1px]">
         <div className="w-6xl  h-full flex pt-20">
@@ -45,7 +45,7 @@ const Hero = () => {
               <div className="logo bg-logos border border-border flex justify-center items-center rounded-md w-30 h-30">
                 <img
                   className="w-20 h-20 object-cover"
-                  src="/nextjs01.svg"
+                  src="/nextjs.svg"
                   alt=""
                 />
               </div>
