@@ -2,70 +2,77 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import ContactAvatar from "./ContactAvatar";
 
 const Contact = () => {
-  return (
-    <div className="w-6xl h-auto mx-auto">
-      <h2>Contact Me</h2>
-      <div className="w-6xl h-40 mt-5 flex justify-between">
-        <div className="w-2xl">
-          <h3>Get In Touch</h3>
-          <ContactAvatar />
-          <div className="flex gap-6 items-center mt-12 pl-3">
-            <a href="">
-              <BsGithub className="w-6 h-6" />
-            </a>
-            <a href="">
-              <BsLinkedin className="w-6 h-6" />
-            </a>
-            <a href="">
-              <BsTwitter className="w-6 h-6" />
-            </a>
-          </div>
-        </div>
-        <div className=" w-4xl h-32">
-          <form className="w-full ">
-            <h3 className="mb-2">Send a Message</h3>
-            <div className="flex gap-4 mb-4">
-              <div className="flex flex-col w-[50%] space-y-2">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  className="outline-none border border-border rounded-md p-2 "
-                />
-              </div>
-              <div className="flex flex-col w-[50%] space-y-2">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  className="outline-none border border-border rounded-md p-2"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col w-[100%] h-36 space-y-2">
-              <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Your message"
-                className="outline-none h-full border border-border rounded-md p-2"
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-3 py-2 text-[#f3f3f3] font-medium rounded-md bg-[#23232c9e]  hover:bg-[#23232c9e]/80 w-full my-4"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-}
+	return (
+		<>
+			<h2>Contact Me</h2>
+			<div className="mt-5 flex h-auto w-full justify-between">
+				<div className="w-1/3 hidden md:block">
+					<h3>Get In Touch</h3>
+					<ContactAvatar />
+					<div className="mt-12 flex items-center gap-6 pl-3">
+						<a href="">
+							<BsGithub className="h-6 w-6" />
+						</a>
+						<a href="">
+							<BsLinkedin className="h-6 w-6" />
+						</a>
+						<a href="">
+							<BsTwitter className="h-6 w-6" />
+						</a>
+					</div>
+				</div>
+				<div className="w-full md:w-[60%]">
+					<form className="w-full">
+						<h3 className="mb-2">Send a Message</h3>
+						<div className="mb-4 flex w-full md:flex-row flex-col  gap-4">
+							<div className="flex w-full  md:w-1/2 flex-col space-y-2">
+								<label htmlFor="name">Name</label>
+								<input
+									type="text"
+									name="name"
+									id="name"
+									placeholder="Name"
+									className="border-border rounded-md border p-2 outline-none"
+								/>
+							</div>
+							<div className="flex w-full  md:w-1/2 flex-col space-y-2">
+								<label htmlFor="email">Email</label>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="Email"
+									className="border-border rounded-md border p-2 outline-none"
+								/>
+							</div>
+						</div>
 
-export default Contact
+
+
+
+
+
+
+						<div className="flex h-36 w-[100%] flex-col space-y-2">
+							<label htmlFor="message">Message</label>
+							<textarea
+								name="message"
+								id="message"
+								placeholder="Your message"
+								className="border-border h-full rounded-md border p-2 outline-none"
+							/>
+						</div>
+						<button
+							type="submit"
+							className="my-4 w-full rounded-md bg-[#23232c9e] px-3 py-2 font-medium text-[#f3f3f3] hover:bg-[#23232c9e]/80"
+						>
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+		</>
+	);
+};
+
+export default Contact;
