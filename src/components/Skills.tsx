@@ -14,16 +14,14 @@ const Skills = () => {
           {Frontend?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2]"
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-dark-shades-2"
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
                 src={skill.image.url}
                 alt={skill.name || "Tool icon"}
               />
-              <span className=" ">
-                {skill.name}
-              </span>
+              <span className=" ">{skill.name}</span>
             </div>
           ))}
         </div>
@@ -36,7 +34,7 @@ const Skills = () => {
           {Backend?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] "
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-bg-dark-shades-2 "
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
@@ -59,7 +57,7 @@ const Skills = () => {
           {Tools?.map((skill) => (
             <div
               key={skill._id}
-              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-[#191126d2] "
+              className=" px-3 py-2 sm:px-4 sm:py-2 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md border border-border transition-all duration-300 ease-in-out group hover:bg-dark-shades-2 "
             >
               <img
                 className="transition-transform duration-300 group-hover:scale-125 w-4 "
