@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function ContactAvatar() {
   const [pupilPos, setPupilPos] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:any) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
@@ -30,7 +30,7 @@ export default function ContactAvatar() {
       />
 
       {/* Eyes wrapper */}
-      <div className="absolute top-[40%] left-[6%] flex gap-2">
+      <div className="absolute top-[40%] left-[8%] flex gap-2">
         {/* Left Eye */}
         <div className="relative w-10 h-10 rounded-full bg-[#dfd2d2] flex items-center justify-center shadow-[inset_-6px_-8px_4px_rgba(0,0,0,0.35)]">
           <div className="absolute w-[2px] h-[5px] rounded-full bg-[rgba(214,214,214,0.726)] blur-[0.2px] left-[10px] rotate-45 z-20"></div>

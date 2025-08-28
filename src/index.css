@@ -1,86 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
 @import "tailwindcss";
+
+@import "tw-animate-css";
 
 
 @theme{
-     --color-light-shades-alpha-1: rgba(186, 188, 243, .06);
 
-     /* --color-light-shades-alpha-1: rgba(55, 80, 155, .04);
-     --color-light-shades-alpha-2: rgba(12, 41, 126, .07);
-     --color-light-shades-alpha-3: rgba(12, 26, 105, .14);
-     --color-light-shades-alpha-4: rgba(1, 17, 88, .24);
-     --color-light-shades-alpha-5: rgba(2, 18, 73, .38);
-     --color-light-shades-alpha-6: rgba(3, 14, 49, .54);
-     --color-light-shades-alpha-7: rgba(1, 8, 34, .68);
-     --color-light-shades-alpha-8: rgba(2, 7, 24, .83); */
-
-     --color-light-shades-1: #1d1f27;
-     --color-light-shades-2: #2f323d;
-     --color-light-shades-3: #4a4e5d;
-     --color-light-shades-4: #6d7285;
-     --color-light-shades-5: #9399ad;
-     --color-light-shades-6: #b4bace;
-     --color-light-shades-7: #d3d8ea;
-     --color-light-shades-8: #eff3ff;
-     --color-light-shades-alpha-2: rgba(194, 202, 245, .16);
-     --color-light-shades-alpha-3: rgba(202, 211, 249, .3);
-     --color-light-shades-alpha-4: rgba(210, 219, 254, .47);
-     --color-light-shades-alpha-5: rgba(216, 224, 252, .65);
-     --color-light-shades-alpha-6: rgba(223, 230, 254, .79);
-     --color-light-shades-alpha-7: rgba(230, 235, 255, .91);
-     --color-light-shades-alpha-8: #eff3ff;
+     --font-helvetica: "HelveticaNeue", sans-serif;
      --color-background: #13151a;
- --color-dark-shades-1: #171b1d;
- --color-dark-shades-2: #22282b;
- --color-dark-shades-3: #323a3f;
- --color-dark-shades-4: #475359;
+ 
+ 
+  --color-dark-shades-4:#67626212;
      --color-dark-shades-5: #62737b;
      --color-dark-shades-6: #8e9ca2;
   --color-secondary:#fefffe;
   --color-text:#bab7b6;
-  --color-navbar:#13151a;
+  --color-navbar:#1a1b1ebd;
   --color-navbarText:#ffffffb3;
-  --color-border:#d1d1d133;
+  --color-border:#3e3d3d33;
   --color-logos:#201d3c;
 
 }
 
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueBlack.otf") format("opentype");
+     font-weight: 900;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueBold.otf") format("opentype");
+     font-weight: 700;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueMedium.otf") format("opentype");
+     font-weight: 500;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueMediumItalic.otf") format("opentype");
+     font-weight: 500;
+     font-style: italic;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueLight.otf") format("opentype");
+     font-weight: 300;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueThin.otf") format("opentype");
+     font-weight: 200;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueUltraLight.otf") format("opentype");
+     font-weight: 100;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: "HelveticaNeue";
+     src: url("/src/assets/fonts/HelveticaNeueHeavy.otf") format("opentype");
+     font-weight: 800;
+     font-style: normal;
+}
 
 @layer base{
    h1{
-         font-family: "Montserrat", sans-serif;
-
+        
          color:var(--color-secondary);
-         font-size: 3.2rem;
+         font-size: 4.2rem;
+         font-weight: 400;
    }
    h2{
-          font-family: "Raleway", sans-serif;
          color:var(--color-secondary);
         font-size: 2.6rem;
         font-weight: 400;
    }
    h3{
-      font-family: "Raleway", sans-serif;
+     
          color:var(--color-secondary);
         font-size: 1.9rem;
         font-weight: 400;
    }
    h4{
-          font-family: "Raleway", sans-serif;
          color:var(--color-secondary);
         font-size: 1.5rem;
         font-weight: 400;
    }
     h5{
-          font-family: "Raleway", serif;
+          
          color:var(--color-secondary);
         font-size: 1rem;
         font-weight: 400;
    }
-
 
    .logo{
     box-shadow: 0 4px 4px #00000040;
@@ -93,84 +120,15 @@
           overflow: hidden;
           position: relative;
    }
-  
+
     body{
         background:var(--color-background);
         color:#a8a4a5;
-        font-family: "Roboto", sans-serif;
+        font-family: "HelveticaNeue", sans-serif;
     }
 }
 
 @layer components{
-  
+
 }
 
-
-/* body {
-    
-     
-     --color-accent: #000;
-     --color-background: #fff;
-     --color-modal-background: rgba(12, 41, 126, .07);
-     --color-error-1: rgba(161, 2, 20, .88);
-     --color-error-2: rgba(228, 3, 3, .63);
-     --color-error-3: rgba(255, 12, 12, .07);
-     --color-warning-1: rgba(124, 75, 1, .94);
-     --color-warning-2: rgba(217, 144, 3, .9);
-     --color-warning-3: rgba(255, 172, 5, .12);
-     --color-confirm-2: rgba(2, 167, 69, .73);
-     --color-confirm-3: rgba(30, 180, 93, .08);
-     --color-dialog: #fff;
-     --color-dialog-bg-light: rgba(12, 41, 126, .07);
-     --color-dialog-bg: rgba(3, 14, 49, .54);
-     --color-paywall-dark: #1d1f27;
-     --color-checkbox-bg: rgba(45, 49, 63, .2);
-     --color-checkbox-bg-hover: rgba(45, 49, 63, .3);
-     --hdr-avif: url(data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAAD5bWV0YQAAAAAAAAAvaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAFBpY3R1cmVIYW5kbGVyAAAAAA5waXRtAAAAAAABAAAAHmlsb2MAAAAARAAAAQABAAAAAQAAASEAAAAeAAAAKGlpbmYAAAAAAAEAAAAaaW5mZQIAAAAAAQAAYXYwMUNvbG9yAAAAAGppcHJwAAAAS2lwY28AAAAUaXNwZQAAAAAAAAABAAAAAQAAABBwaXhpAAAAAAMKCgoAAAAMYXYxQ4EATAAAAAATY29scm5jbHgACQAQAAkAAAAAF2lwbWEAAAAAAAAAAQABBAECgwQAAAAmbWRhdAoMAAAAAAB//OhIgEggMg4QALwAAAJAAAIDVJX4QA==)
-}
-
-body#dark-theme {
-     --color-confirm-2: rgba(34, 252, 116, .52);
-     --color-confirm-3: rgba(56, 252, 107, .16);
-     --color-accent: #fff;
-     
-     --color-modal-background: rgba(3, 6, 13, .8);
-     --color-dialog: #2f323d;
-     --color-dialog-bg-light: rgba(19, 21, 26, .3);
-     --color-dialog-bg: rgba(19, 21, 26, .8);
-     --color-paywall-dark: #1d1f27;
-     --color-checkbox-bg: rgba(239, 243, 255, .2);
-     --color-checkbox-bg-hover: rgba(239, 243, 255, .3)
-}
-
-@media(prefers-color-scheme: dark) {
-     body:not(#light-theme) {
-          --color-light-shades-1: #1d1f27;
-          --color-light-shades-2: #2f323d;
-          --color-light-shades-3: #4a4e5d;
-          --color-light-shades-4: #6d7285;
-          --color-light-shades-5: #9399ad;
-          --color-light-shades-6: #b4bace;
-          --color-light-shades-7: #d3d8ea;
-          --color-light-shades-8: #eff3ff;
-          --color-light-shades-alpha-1: rgba(186, 188, 243, .06);
-          --color-light-shades-alpha-2: rgba(194, 202, 245, .16);
-          --color-light-shades-alpha-3: rgba(202, 211, 249, .3);
-          --color-light-shades-alpha-4: rgba(210, 219, 254, .47);
-          --color-light-shades-alpha-5: rgba(216, 224, 252, .65);
-          --color-light-shades-alpha-6: rgba(223, 230, 254, .79);
-          --color-light-shades-alpha-7: rgba(230, 235, 255, .91);
-          --color-light-shades-alpha-8: #eff3ff;
-          --color-confirm-2: rgba(34, 252, 116, .52);
-          --color-confirm-3: rgba(56, 252, 107, .16);
-          --color-accent: #fff;
-          --color-background: #13151a;
-          --color-modal-background: rgba(3, 6, 13, .8);
-          --color-dialog: #2f323d;
-          --color-dialog-bg-light: rgba(19, 21, 26, .3);
-          --color-dialog-bg: rgba(19, 21, 26, .8);
-          --color-paywall-dark: #1d1f27;
-          --color-checkbox-bg: rgba(239, 243, 255, .2);
-          --color-checkbox-bg-hover: rgba(239, 243, 255, .3)
-     }
-} */

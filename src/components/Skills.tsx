@@ -2,7 +2,7 @@ import { Backend, Frontend, Tools } from "../data/skills";
 
 const Skills = () => {
   return (
-    <div className="w-6xl h-auto  mx-auto pb-20">
+    <div className="w-6xl h-auto  mx-auto pb-20 mt-20">
       <h2 className="mb-4">My Skills</h2>
       <p className="mb-6 text-[18px]">
         Technologies I’ve Hands-On Experience With
@@ -53,7 +53,7 @@ const Skills = () => {
       <div>
         <h3 className="mt-5">Tools & Platforms</h3>
 
-        <div className=" flex  flex-wrap items-center  gap-4 mt-5">
+        <div className=" flex  flex-wrap items-center  gap-4 ">
           {Tools?.map((skill) => (
             <div
               key={skill._id}
