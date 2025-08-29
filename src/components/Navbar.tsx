@@ -67,7 +67,7 @@ const Navbar = ({
 		<>
 			<div className="bg-navbar fixed inset-x-0 top-4 z-50 mx-auto h-18 rounded-4xl px-10 py-4 backdrop-blur-md md:w-full md:px-20 lg:w-5xl xl:w-6xl">
 				<nav className="text-navbarText relative flex w-full items-center justify-between py-2">
-					<div>Logo</div>
+					<div><img src="/AryanLogo.png" className=" w-7 h-7" alt="" /></div>
 
 					{/* Menu toggle button */}
 					<button
