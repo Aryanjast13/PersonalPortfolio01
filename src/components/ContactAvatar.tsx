@@ -18,7 +18,7 @@ export default function ContactAvatar() {
 
 	return (
 		<div
-			className="relative flex w-full items-center"
+			className="relative flex w-full items-center "
 			onMouseMove={handleMouseMove}
 		>
 			{/* Avatar image */}

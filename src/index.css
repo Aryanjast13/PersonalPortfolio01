@@ -136,20 +136,7 @@
 		margin-bottom: 3px;
 	}
 
-	.links::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 0%;
-		height: 1px;
-		background: white;
-		transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-	}
-
-	.links:hover::after {
-		width: 100%;
-	}
+	
 	/* Custom scrollbar class */
 	.scrollbar-custom::-webkit-scrollbar {
 		height: 12px;

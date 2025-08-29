@@ -1,12 +1,13 @@
 import { Analytics } from "@vercel/analytics/react";
 import Layout from "./components/Layout";
+import { BrowserRouter } from "react-router";
 
 function App() {
 	return (
-		<div className="">
+		<BrowserRouter>
 			<Layout />
 			<Analytics />
-		</div>
+		</BrowserRouter>
 	);
 }
 

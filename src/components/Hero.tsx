@@ -1,16 +1,12 @@
-import { BsDownload } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { Link } from "react-router";
+import { DownloadIcon } from "./ui/DownloadIcon";
 import { GithubIcon } from "./ui/GithubIcon";
 import { LinkedInIcon } from "./ui/LinkedinIcon";
 import { TwitterIcon } from "./ui/TwitterIcon";
 
 const Hero = () => {
-
-
-   
-
-
 	return (
 		<div className="relative mx-auto h-auto w-full pt-20 lg:w-5xl xl:w-6xl">
 			<div className="mx-auto h-full w-full pt-[.1px]">
@@ -29,26 +25,26 @@ const Hero = () => {
 							performance, usability, and clean code
 						</p>
 						<div className="flex items-center gap-4">
-							<button className="flex items-center gap-4 rounded-lg bg-[#5a4e4e33] px-3 py-2">
-								<BsDownload />
-								<span className="mt-1">Resume</span>
+							<button className="flex items-center gap-2 rounded-lg bg-[#5a4e4e33] px-3 py-2 hover:bg-[#5a4e4e33]/50">
+								<DownloadIcon size={21} />
+								<span className="mt-1 text-base">Resume</span>
 							</button>
-							<a
-								href="https://github.com/Aryanjast13"
+							<Link
+								to="https://github.com/Aryanjast13"
 								target="_blank"
-								className="mt-1"
+								className="mt-3"
 							>
-								<GithubIcon size={20} />
-							</a>
-							<a
-								href="https://www.linkedin.com/in/aryan-kumar-370b1830a/"
+								<GithubIcon size={23} />
+							</Link>
+							<Link
+								to="https://www.linkedin.com/in/aryan-kumar-370b1830a/"
 								target="_blank"
 							>
-								<LinkedInIcon size={20} className="mt-1" />
-							</a>
-							<a href="">
-								<TwitterIcon size={19} className="mt-1" />
-							</a>
+								<LinkedInIcon size={23} className="mt-3" />
+							</Link>
+							<Link to="">
+								<TwitterIcon size={22} className="mt-3" />
+							</Link>
 						</div>
 					</div>
 

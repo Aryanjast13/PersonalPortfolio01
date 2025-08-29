@@ -31,7 +31,7 @@ const ProjectCard = () => {
 					{["Reactjs", , "Tailwind CSS", "Framer"].map((item) => (
 						<span
 							key={item}
-							className="bg-logos text-secondary-foreground hover:bg-logos/80 inline-flex items-center rounded-full border border-transparent px-2.5 py-0.5 text-sm font-semibold transition-colors"
+							className="text-secondary-foreground inline-flex items-center rounded-full border border-transparent bg-[#333a438a] px-2.5 py-0.5 text-sm font-semibold transition-colors hover:bg-[#333a438a]/50"
 						>
 							{item}
 						</span>

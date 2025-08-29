@@ -1,30 +1,52 @@
+
 import Contact from "./Contact";
+import FooterSection from "./FooterSection";
 import Hero from "./Hero";
 import MobileBottomNav from "./MobileBottomNav";
 import Navbar from "./Navbar";
 import Project from "./Project";
 import Skills from "./Skills";
+import { useRef } from "react";
 
 const Layout = () => {
+	const heroRef = useRef(null);
+     const skillsRef = useRef(null);
+     const projectsRef = useRef(null);
+	const contactRef = useRef(null);
+	
+
+	
+
 	return (
 		<div className="relative md:px-5">
-			<Navbar />
-			<section id="hero">
+			<Navbar
+				heroRef={heroRef}
+				skillsRef={skillsRef}
+				projectsRef={projectsRef}
+				contactRef={contactRef}
+			/>
+			<section ref={heroRef}>
 				<Hero />
 			</section>
-			<section id="skills">
+			<section ref={skillsRef}>
 				<Skills />
 			</section>
-			<section id="projects">
+			<section ref={projectsRef}>
 				<Project />
 			</section>
 			<section
-				id="contact"
-				className="mx-auto h-fit w-full pb-20 md:pb-0  px-5 lg:w-5xl xl:w-6xl"
+				ref={contactRef}
+				className="mx-auto h-fit w-full px-5 md:pb-0 lg:w-5xl xl:w-6xl"
 			>
 				<Contact />
 			</section>
-			<MobileBottomNav/>
+			<FooterSection/>
+			<MobileBottomNav
+				heroRef={heroRef}
+				skillsRef={skillsRef}
+				projectsRef={projectsRef}
+				contactRef={contactRef}
+			/>
 		</div>
 	);
 };
