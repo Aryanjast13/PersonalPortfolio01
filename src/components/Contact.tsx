@@ -51,25 +51,6 @@ const Contact = () => {
 				<div className="hidden w-1/3 md:block">
 					<h3>Get In Touch</h3>
 					<ContactAvatar />
-					<div
-						className={`absolute top-5 right-5 flex transform items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800 shadow-lg shadow-emerald-100 transition-all duration-500 ease-out ${showMessage ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="h-5 w-5 text-emerald-500"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							strokeWidth="2"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M5 13l4 4L19 7"
-							/>
-						</svg>
-						Successfully sent
-					</div>
 
 					<div className="mt-4 flex items-center gap-6 pl-3">
 						<Link
@@ -91,6 +72,25 @@ const Contact = () => {
 					</div>
 				</div>
 				<div className="w-full md:w-[60%]">
+					<div
+						className={`absolute top-5 right-5 flex transform items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800 shadow-lg shadow-emerald-100 transition-all duration-500 ease-out ${showMessage ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-5 w-5 text-emerald-500"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth="2"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M5 13l4 4L19 7"
+							/>
+						</svg>
+						Successfully sent
+					</div>
 					<form onSubmit={handleSubmit} className="w-full">
 						<h3 className="mb-2">Send a Message</h3>
 						<div className="mb-4 flex w-full flex-col gap-4 md:flex-row">
