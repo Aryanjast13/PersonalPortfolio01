@@ -22,7 +22,7 @@ const Contact = () => {
 	const handleSubmit = async (e: FormEvent) => {
 		setLoading(true);
 		e.preventDefault();
-		const response = await axios.post(`${URL}/contact`, { name:formData.name,email:formData.email,message:formData.message });
+		const response = await axios.post(`${URL}/api/contact`, { name:formData.name,email:formData.email,message:formData.message });
 		const result = await response.data;
 		if (result.ok) {
 			setShowMessage(true)
@@ -31,7 +31,7 @@ const Contact = () => {
 			setTimeout(() => {
 				setShowMessage(false);
 		},3000);
-		}
+		} 
 		console.log(result);
 		setFormData({ name: "", email: "", message: "" });
 	}
@@ -100,6 +100,7 @@ const Contact = () => {
 									type="text"
 									name="name"
 									id="name"
+									required
 									value={formData.name}
 									onChange={handleChange}
 									placeholder="Name"
@@ -112,6 +113,7 @@ const Contact = () => {
 									type="email"
 									name="email"
 									id="email"
+									required
 									value={formData.email}
 									onChange={handleChange}
 									placeholder="Email"
@@ -125,6 +127,7 @@ const Contact = () => {
 							<textarea
 								name="message"
 								id="message"
+								required
 								value={formData.message}
 								onChange={handleChange}
 								placeholder="Your message"
