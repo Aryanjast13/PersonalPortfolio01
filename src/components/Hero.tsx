@@ -7,6 +7,9 @@ import { LinkedInIcon } from "./ui/LinkedinIcon";
 import { TwitterIcon } from "./ui/TwitterIcon";
 
 const Hero = () => {
+	const resumeUrl =
+		"https://drive.google.com/uc?export=download&id=1-YG3zLJiHd257coRXplF4p713nhoTR4T";
+
 	return (
 		<div className="relative mx-auto h-auto w-full pt-20 lg:w-5xl xl:w-6xl">
 			<div className="mx-auto h-full w-full pt-[.1px]">
@@ -25,10 +28,15 @@ const Hero = () => {
 							performance, usability, and clean code
 						</p>
 						<div className="flex items-center gap-4">
-							<button className="flex items-center gap-2 rounded-lg bg-[#5a4e4e33] px-3 py-2 hover:bg-[#5a4e4e33]/50">
+							<Link
+								to={resumeUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex items-center gap-2 rounded-lg bg-[#5a4e4e33] px-3 py-2 hover:bg-[#5a4e4e33]/50"
+							>
 								<DownloadIcon size={21} />
 								<span className="mt-1 text-base">Resume</span>
-							</button>
+							</Link>
 							<Link
 								to="https://github.com/Aryanjast13"
 								target="_blank"

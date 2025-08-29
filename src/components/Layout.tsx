@@ -18,7 +18,7 @@ const Layout = () => {
 	
 
 	return (
-		<div className="relative md:px-5">
+		<div className="relative md:px-5 overflow-hidden">
 			<Navbar
 				heroRef={heroRef}
 				skillsRef={skillsRef}
@@ -36,7 +36,7 @@ const Layout = () => {
 			</section>
 			<section
 				ref={contactRef}
-				className="mx-auto h-fit w-full px-5 md:pb-0 lg:w-5xl xl:w-6xl"
+				className="mx-auto h-fit w-full px-5 md:pb-0 lg:w-5xl xl:w-6xl relative"
 			>
 				<Contact />
 			</section>

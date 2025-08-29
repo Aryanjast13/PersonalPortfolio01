@@ -227,6 +227,14 @@
 	.mongoUp-down {
 		animation: mongoUpDown 4s ease-in-out infinite;
 	}
+
+	@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
 }
 
 @layer components {
