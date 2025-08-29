@@ -15,7 +15,7 @@ const Layout = () => {
 			<section id="skills">
 				<Skills />
 			</section>
-			<section id="project">
+			<section id="projects">
 				<Project />
 			</section>
 			<section

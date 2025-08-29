@@ -79,6 +79,11 @@
 	html {
 		scroll-behavior: smooth;
 	}
+	body {
+		background: var(--color-background);
+		color: #a8a4a5;
+		font-family: "HelveticaNeue", sans-serif;
+	}
 	h1 {
 		color: var(--color-secondary);
 
@@ -120,12 +125,31 @@
 		position: relative;
 	}
 
-	body {
-		background: var(--color-background);
-		color: #a8a4a5;
-		font-family: "HelveticaNeue", sans-serif;
+	.selected::before {
+		content: "";
+		background-color: #1e7ebd;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 100%;
+		display: inline-block;
+		margin-right: 8px;
+		margin-bottom: 3px;
 	}
 
+	.links::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0%;
+		height: 1px;
+		background: white;
+		transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+	}
+
+	.links:hover::after {
+		width: 100%;
+	}
 	/* Custom scrollbar class */
 	.scrollbar-custom::-webkit-scrollbar {
 		height: 12px;
@@ -161,6 +185,60 @@
 
 	.scrollbar-custom:hover {
 		scrollbar-color: #1f2937 transparent;
+	}
+
+	/* /animation */
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
+		}
+
+		to {
+			transform: rotate(359deg);
+		}
+	}
+
+	.rotate-infinite {
+		animation: rotation 4.5s linear infinite;
+	}
+
+	@keyframes upDown {
+		0%,
+		100% {
+			transform: translateY(-10px);
+		}
+
+		50% {
+			transform: translateY(4px);
+		}
+	}
+
+	.up-down {
+		animation: upDown 4s ease-in-out infinite;
+	}
+
+	@keyframes mongoUpDown {
+		0%{transform: translateY(0);}
+
+		25%{
+          transform:translateY(3px);
+		}
+
+		50% {
+			transform: translateY(7px);
+		}
+		75%{
+			transform:translateY(2px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+
+		
+	}
+
+	.mongoUp-down {
+		animation: mongoUpDown 4s ease-in-out infinite;
 	}
 }
 

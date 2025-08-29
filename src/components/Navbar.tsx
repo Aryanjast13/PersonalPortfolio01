@@ -4,6 +4,28 @@ import { HiX } from "react-icons/hi";
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [active, setActive] = useState("home");
+
+	const navItems = [
+			{ id: "home", label: "Home", href: "#hero" },
+			{
+				id: "skills",
+				label: "Skills",
+			
+				href: "#skills",
+			},
+			{
+				id: "projects",
+				label: "Projects",
+				
+				href: "#projects",
+			},
+			{
+				id: "contact",
+				label: "Contact",
+				href: "#contact",
+			},
+		];
 
 	return (
 		<>
@@ -25,17 +47,26 @@ const Navbar = () => {
 					</button>
 
 					{/* Desktop menu */}
-					<ul className="hidden gap-10 text-base md:flex">
-						<a href="#hero">Home</a>
-						<a href="#skills">Skills</a>
-						<a href="#projects">Projects</a>
-						<a href="#contact">Contact</a>
+					<ul className="hidden gap-16 text-base md:flex">
+						{navItems.map(({ id, label, href }) => (
+							<li key={id}>
+								<a
+									href={href}
+									onClick={() => setActive(id)}
+									className={`links relative  flex  items-center text-sm ${
+										active === id ? "selected text-[#1e7ebd]" : "text-[#dee3ea]"
+									}`}
+								>
+									{label}
+								</a>
+							</li>
+						))}
 					</ul>
 				</nav>
 			</div>
 			{/* Mobile menu with animation */}
 			<div
-				className={`bg-navbar fixed top-24 left-0 z-40 flex w-full flex-col py-2 items-center justify-center space-y-6 rounded-4xl text-base backdrop-blur-md transition-transform duration-300 md:hidden ${
+				className={`bg-navbar fixed top-24 left-0 z-40 flex w-full flex-col items-center justify-center space-y-6 rounded-4xl py-2 text-base backdrop-blur-md transition-transform duration-300 md:hidden ${
 					menuOpen
 						? "pointer-events-auto translate-y-0 opacity-100"
 						: "pointer-events-none -translate-y-10 opacity-0"
