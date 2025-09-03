@@ -5,52 +5,72 @@ import { GithubIcon } from "./ui/GithubIcon";
 import { LinkedInIcon } from "./ui/LinkedinIcon";
 import { TwitterIcon } from "./ui/TwitterIcon";
 import { useState, type FormEvent } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
-		message:""
-	})
+		message: "",
+	});
+	const [pupilPos, setPupilPos] = useState({ x: 0, y: 0 });
 	const [showMessage, setShowMessage] = useState(false);
 	const [loading, setLoading] = useState(false);
 
-	const URL = import.meta.env.VITE_Backend_Url
-
+	const URL = import.meta.env.VITE_Backend_Url;
 
 	const handleSubmit = async (e: FormEvent) => {
 		setLoading(true);
 		e.preventDefault();
-		const response = await axios.post(`${URL}/api/contact`, { name:formData.name,email:formData.email,message:formData.message });
+		const response = await axios.post(`${URL}/api/contact`, {
+			name: formData.name,
+			email: formData.email,
+			message: formData.message,
+		});
 		const result = await response.data;
 		if (result.ok) {
-			setShowMessage(true)
+			setShowMessage(true);
 			setLoading(false);
 
 			setTimeout(() => {
 				setShowMessage(false);
-		},3000);
-		} 
+			}, 3000);
+		}
 		console.log(result);
 		setFormData({ name: "", email: "", message: "" });
-	}
+	};
 
 	const handleChange = (e: any) => {
 		const { name, value } = e.target;
-		setFormData(prev => ({
+		setFormData((prev) => ({
 			...prev,
-			[name]: value
+			[name]: value,
 		}));
-	}
+	};
+
+
+	const handleMouseMove = (e: any) => {
+		const rect = e.currentTarget.getBoundingClientRect();
+		const x = e.clientX - rect.left - rect.width / 2;
+		const y = e.clientY - rect.top - rect.height / 2;
+
+		// pupil movement clamp
+		const limit = 6;
+		const clampedX = Math.max(-limit, Math.min(limit, x / 22));
+		const clampedY = Math.max(-limit, Math.min(limit, y / 24));
+
+		setPupilPos({ x: clampedX, y: clampedY });
+	};
 
 	return (
-		<>
-			<h2>Contact Me</h2>
+		<div
+			className="relative mx-auto h-fit w-full px-5 pt-22 md:pb-0 lg:w-5xl xl:w-6xl"
+			onMouseMove={handleMouseMove}
+		>
 			<div className="mt-5 flex h-auto w-full justify-between">
 				<div className="hidden w-1/3 md:block">
 					<h3>Get In Touch</h3>
-					<ContactAvatar />
+					<ContactAvatar pupilPos={pupilPos} />
 
 					<div className="mt-4 flex items-center gap-6 pl-3">
 						<Link
@@ -143,7 +163,7 @@ const Contact = () => {
 					</form>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

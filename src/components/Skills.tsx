@@ -2,7 +2,7 @@ import { Backend, Frontend, Tools } from "../data/skills";
 
 const Skills = () => {
 	return (
-		<div className="mx-auto mt-20 h-auto w-full px-5 pb-20 lg:w-5xl xl:w-6xl">
+		<div className="mx-auto pt-22 h-auto w-full px-5 lg:w-5xl xl:w-6xl">
 			<h2 className="mb-4">My Skills</h2>
 			<p className="mb-6 text-[20px]">
 				Technologies I’ve Hands-On Experience With
